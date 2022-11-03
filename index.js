@@ -1,9 +1,10 @@
 // IMPORTS
-const writeFile = require('fs')
+const { writeFile } = require('fs')
 const inquirer = require('inquirer')
 const managerQuestions = require('./src/managerQuestions')
 const engineerQuestions = require('./src/engineerQuestions')
 const internQuestions = require('./src/internQuestions')
+const renderHTML = require('./src/renderHTML')
 
 // Build the arrays of answers
 const managerOutput = []
@@ -41,7 +42,17 @@ function askIntern() {
     if (internAnswers.internAskAgain) {
       askIntern()
     } else {
-      console.log('Data to be compiled')
+      const compiledData = renderHTML(
+        managerOutput,
+        engineerOutput,
+        internOutput
+      )
+
+      writeFile('./dist/index.html', compiledData, (err) => {
+        if (err) {
+          return err
+        }
+      })
     }
   })
 }

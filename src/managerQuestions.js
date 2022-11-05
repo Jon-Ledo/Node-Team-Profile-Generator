@@ -1,4 +1,4 @@
-const questions = [
+const managerQuestions = [
   {
     type: 'input',
     name: 'managerName',
@@ -27,4 +27,4 @@ const questions = [
   },
 ]
 
-module.exports = questions
+module.exports = managerQuestions

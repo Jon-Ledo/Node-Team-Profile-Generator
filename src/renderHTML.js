@@ -36,7 +36,7 @@ function parseEngineerData(arrayData) {
       <div class="card-body">
         <p class="card-text">ID: ${data.id}</p>
         <p class="card-text">Email: <a href="${data.email}">${data.name}'s Email</a></p>
-        <p class="card-text">Github: ${data.github}</p>
+        <p class="card-text">Github: <a href="https://github.com/${data.github}" target="_blank" rel="noreferrer noopener">${data.github}</a></p>
       </div>
     </div>
     <!-- END OF A CARD --> 

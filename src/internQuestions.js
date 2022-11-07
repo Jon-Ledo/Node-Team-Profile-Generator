@@ -12,7 +12,7 @@ const internQuestions = [
   {
     type: 'input',
     name: 'internEmail',
-    message: 'Enter intern email',
+    message: 'Enter intern email (example: name@email.com)',
   },
   {
     type: 'input',

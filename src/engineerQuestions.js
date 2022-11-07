@@ -12,7 +12,7 @@ const engineerQuestions = [
   {
     type: 'input',
     name: 'engineerEmail',
-    message: 'Enter engineer email',
+    message: 'Enter engineer email (example: name@email.com)',
   },
   {
     type: 'input',

@@ -12,7 +12,7 @@ const managerQuestions = [
   {
     type: 'input',
     name: 'managerEmail',
-    message: 'Enter manager email',
+    message: 'Enter manager email (example: name@email.com)',
   },
   {
     type: 'input',

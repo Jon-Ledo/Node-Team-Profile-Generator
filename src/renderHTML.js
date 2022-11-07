@@ -11,7 +11,7 @@ function parseManagerData(arrayData) {
         </header>
         <div class="card-body">
           <p class="card-text">ID: ${data.id}</p>
-          <p class="card-text">Email: <a href="${data.email}">${data.name}'s Email</a></p>
+          <p class="card-text">Email: <a href="mailto:${data.email}">${data.email}</a></p>
           <p class="card-text">Office Number: ${data.officeNumber}</p>
         </div>
       </div>
@@ -35,7 +35,7 @@ function parseEngineerData(arrayData) {
       </header>
       <div class="card-body">
         <p class="card-text">ID: ${data.id}</p>
-        <p class="card-text">Email: <a href="${data.email}">${data.name}'s Email</a></p>
+        <p class="card-text">Email: <a href="mailto:${data.email}">${data.email}</a></p>
         <p class="card-text">Github: <a href="https://github.com/${data.github}" target="_blank" rel="noreferrer noopener">${data.github}</a></p>
       </div>
     </div>
@@ -59,7 +59,7 @@ function parseInternData(arrayData) {
       </header>
       <div class="card-body">
         <p class="card-text">ID: ${data.id}</p>
-        <p class="card-text">Email: <a href="${data.email}">${data.name}'s Email</a></p>
+        <p class="card-text">Email: <a href="mailto:${data.email}">${data.email}</a></p>
         <p class="card-text">School: ${data.school}</p>
       </div>
     </div>

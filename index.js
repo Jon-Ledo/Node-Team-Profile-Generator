@@ -4,6 +4,7 @@ const inquirer = require('inquirer')
 const managerQuestions = require('./src/managerQuestions')
 const engineerQuestions = require('./src/engineerQuestions')
 const internQuestions = require('./src/internQuestions')
+const menuQuestions = require('./src/menuQuestions')
 const renderHTML = require('./src/renderHTML')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
@@ -15,7 +16,7 @@ const engineerOutput = []
 const internOutput = []
 
 // functions to ask questions
-// - askManager, askEngi, askIntern
+// - askManager, askEngi, askIntern and a menu function
 function askManager() {
   inquirer.prompt(managerQuestions).then((managerAnswers) => {
     const managerObj = new Manager(managerAnswers.office, [
@@ -31,7 +32,7 @@ function askManager() {
     if (managerAnswers.managerAskAgain) {
       askManager()
     } else {
-      askEngi()
+      chooseMenu()
     }
   })
 }
@@ -47,11 +48,7 @@ function askEngi() {
     // push object into array to parse later
     engineerOutput.push(engineerObj)
 
-    if (engiAnswers.engineerAskAgain) {
-      askEngi()
-    } else {
-      askIntern()
-    }
+    chooseMenu()
   })
 }
 
@@ -66,7 +63,15 @@ function askIntern() {
     // push object into array to parse later
     internOutput.push(internObj)
 
-    if (internAnswers.internAskAgain) {
+    chooseMenu()
+  })
+}
+
+function chooseMenu() {
+  inquirer.prompt(menuQuestions).then((choice) => {
+    if (choice.choice === 'Engineer') {
+      askEngi()
+    } else if (choice.choice === 'Intern') {
       askIntern()
     } else {
       const compiledData = renderHTML(

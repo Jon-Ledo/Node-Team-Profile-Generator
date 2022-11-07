@@ -28,13 +28,3 @@ const managerQuestions = [
 ]
 
 module.exports = managerQuestions
-
-
-// menu
-// add an engineer
-// add an intern
-// finish building my team 
-
-// select engineer
-// fill inputs
-// go back to previous menu

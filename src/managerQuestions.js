@@ -19,12 +19,6 @@ const managerQuestions = [
     name: 'office',
     message: 'Enter manager office number',
   },
-  {
-    type: 'confirm',
-    name: 'managerAskAgain',
-    message: 'Want to enter another manager? (just hit enter for YES)?',
-    default: true,
-  },
 ]
 
 module.exports = managerQuestions

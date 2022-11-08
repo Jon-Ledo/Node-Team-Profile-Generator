@@ -19,12 +19,6 @@ const engineerQuestions = [
     name: 'github',
     message: 'Enter github username',
   },
-  {
-    type: 'confirm',
-    name: 'engineerAskAgain',
-    message: 'Want to enter another engineer? (just hit enter for YES)?',
-    default: true,
-  },
 ]
 
 module.exports = engineerQuestions

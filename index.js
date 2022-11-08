@@ -29,11 +29,7 @@ function askManager() {
     // push object into array to parse later
     managerOutput.push(managerObj)
 
-    if (managerAnswers.managerAskAgain) {
-      askManager()
-    } else {
-      chooseMenu()
-    }
+    chooseMenu()
   })
 }
 

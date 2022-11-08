@@ -19,12 +19,6 @@ const internQuestions = [
     name: 'school',
     message: 'Enter school name',
   },
-  {
-    type: 'confirm',
-    name: 'internAskAgain',
-    message: 'Want to enter another intern? (just hit enter for YES)?',
-    default: true,
-  },
 ]
 
 module.exports = internQuestions

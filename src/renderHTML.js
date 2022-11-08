@@ -5,7 +5,7 @@ function parseManagerData(arrayData) {
       return `
       <!-- START OF CARD -->
       <div class="card col-md-4 col-12">
-        <header class="card-header">
+        <header class="card-header manager">
           <h2>${data.name}</h2>
           <p>Manager</p>
         </header>
@@ -27,19 +27,19 @@ function parseEngineerData(arrayData) {
   const engineers = arrayData
     .map((data) => {
       return `
-    <!-- START OF CARD -->
-    <div class="card col-md-4 col-12">
-      <header class="card-header">
-        <h2>${data.name}</h2>
-        <p>Engineer</p>
-      </header>
-      <div class="card-body">
-        <p class="card-text">ID: ${data.id}</p>
-        <p class="card-text">Email: <a href="mailto:${data.email}">${data.email}</a></p>
-        <p class="card-text">Github: <a href="https://github.com/${data.github}" target="_blank" rel="noreferrer noopener">${data.github}</a></p>
+      <!-- START OF CARD -->
+      <div class="card col-md-4 col-12">
+        <header class="card-header engineer">
+          <h2>${data.name}</h2>
+          <p>Engineer</p>
+        </header>
+        <div class="card-body">
+          <p class="card-text">ID: ${data.id}</p>
+          <p class="card-text">Email: <a href="mailto:${data.email}">${data.email}</a></p>
+          <p class="card-text">Github: <a href="https://github.com/${data.github}" target="_blank" rel="noreferrer noopener">${data.github}</a></p>
+        </div>
       </div>
-    </div>
-    <!-- END OF A CARD --> 
+      <!-- END OF A CARD --> 
     `
     })
     .join('')
@@ -51,19 +51,19 @@ function parseInternData(arrayData) {
   const interns = arrayData
     .map((data) => {
       return `
-    <!-- START OF CARD -->
-    <div class="card col-md-4 col-12">
-      <header class="card-header">
-        <h2>${data.name}</h2>
-        <p>Intern</p>
-      </header>
-      <div class="card-body">
-        <p class="card-text">ID: ${data.id}</p>
-        <p class="card-text">Email: <a href="mailto:${data.email}">${data.email}</a></p>
-        <p class="card-text">School: ${data.school}</p>
+      <!-- START OF CARD -->
+      <div class="card col-md-4 col-12">
+        <header class="card-header intern">
+          <h2>${data.name}</h2>
+          <p>Intern</p>
+        </header>
+        <div class="card-body">
+          <p class="card-text">ID: ${data.id}</p>
+          <p class="card-text">Email: <a href="mailto:${data.email}">${data.email}</a></p>
+          <p class="card-text">School: ${data.school}</p>
+        </div>
       </div>
-    </div>
-    <!-- END OF A CARD -->
+      <!-- END OF A CARD -->
     `
     })
     .join('')
@@ -90,8 +90,7 @@ function renderHTML(managerData, engineerData, internData) {
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
         crossorigin="anonymous"
       />
-      <link rel="stylesheet" href="" />
-      <script src="" defer></script>
+      <link rel="stylesheet" href="./style.css" />
       <title>Team Management System</title>
     </head>
     <body>
@@ -100,7 +99,7 @@ function renderHTML(managerData, engineerData, internData) {
       </header>
 
       <div class="container">
-        <main class="row">
+        <main class="row gy-3">
           ${manager}
 
           ${engineer}

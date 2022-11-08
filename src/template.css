@@ -1,0 +1,46 @@
+h1 {
+  color: #f0f8ff;
+  font-size: 40px;
+  text-shadow: 1px 1px #232222;
+  letter-spacing: 2px;
+}
+
+.card {
+  padding: 0;
+  box-shadow: 4px 4px 4px rgb(152, 147, 147);
+}
+
+.card-header h2,
+.card-header p {
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 1px 1px #333333;
+  text-transform: capitalize;
+}
+
+.card-header p {
+  font-size: 18px;
+}
+
+.manager {
+  background-color: #f13030;
+}
+
+.engineer {
+  background-color: #fa9418;
+}
+
+.intern {
+  background-color: #8bf422;
+}
+
+.intern h2,
+.intern p {
+  color: black;
+  text-shadow: none;
+}
+
+a {
+  text-decoration: none;
+}

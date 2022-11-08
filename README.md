@@ -6,7 +6,7 @@
 
 A profile card generator using [NodeJS](https://nodejs.org/en/) and the npm package [Inquirer](https://www.npmjs.com/package/inquirer). After answering a series of prompts for questions relating to name and email address, an HTML file is created showing your team's information (names, emails, github account, school and office number).
 
-![project-preview-image](./Assets/)
+![project-preview-image](./Assets/teamprofilegen.JPG)
 
 ### My motivations
 
@@ -20,7 +20,7 @@ First time using [Jest](https://jestjs.io/) which had a bit of a learning curve 
 
 ## Preview
 
-[video to youtube link](https://www.youtube.com/watch?v=VDeZXpyb7vg)
+[video to youtube link](https://www.youtube.com/watch?v=s1CMUl7fN28)
 
 ## Table of Contents
 
@@ -69,7 +69,7 @@ Then simply answer all the questions in your terminal, until the HTML file is cr
 
 ## License
 
-[![license badge](./license-badge.svg)](https://choosealicense.com/licenses/mit/)
+[![license badge](./Assets/license-badge.svg)](https://choosealicense.com/licenses/mit/)
 
 For more information about the licensing of this project, please click on the badge above, or follow this link https://choosealicense.com/licenses/mit/
 
